@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 export const HeroSection = () => {
-  const brandName = ["n", "u", "v", "e", "s", "s", "i"];
+  const brandName = ["s", "l", "a", "v", "a", "n","."];
   const halfLength = Math.floor(brandName.length / 2);
 
   useGSAP(() => {
@@ -24,7 +24,7 @@ export const HeroSection = () => {
 
   return (
     <div className="min-h-screen items-center justify-center font-sans font-bold flex flex-col">
-      <div className="text-9xl text-violet-700 overflow-hidden">
+      <div className="text-9xl text-purple-500 overflow-hidden">
         {brandName.map((char, idx) =>
           idx < halfLength ? (
             <span key={idx} className="inline-block start">
