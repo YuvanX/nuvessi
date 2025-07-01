@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export const HeroSection = () => {
   const overlay = useRef(null);
   const [isOverlayCompleted, setIsOverlayCompleted] = useState(false);
+
   const brandName = ["s", "l", "a", "v", "a", "n", "."];
   const halfLength = Math.floor(brandName.length / 2);
 
@@ -32,11 +33,11 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen items-center justify-center font-sans font-bold flex flex-col relative">
+    <div className="min-h-screen font-sans  flex flex-col relative">
       {isOverlayCompleted ? (
-        <div>hi there</div>
+        <div>Making yours into ours - a brand built together</div>
       ) : (
-        <div className="text-9xl text-purple-500 overflow-hidden ">
+        <div className="text-9xl text-purple-500 overflow-hidden font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {brandName.map((char, idx) =>
             idx < halfLength ? (
               <span key={idx} className="inline-block start">
