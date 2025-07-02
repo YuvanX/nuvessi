@@ -7,12 +7,11 @@ export const HeroSection = () => {
   const [isOverlayCompleted, setIsOverlayCompleted] = useState(false);
 
   const brandName = ["s", "l", "a", "v", "a", "n", "."];
-  const brandDescription = "Making yours into ours - a brand built together.".split(' ');
-  
+  const brandDescription = "Making yours into ours - a brand built together.".split(" ");
+  const subDescripton = "We collaborate with founders and dreamers to shape brands that feel personal, intentional, and timeless. From story to style — we craft every detail with purpose.".split(" ")
   const halfLength = Math.floor(brandName.length / 2);
 
   useEffect(() => {
-    
     const tl = gsap.timeline();
     tl.from(".start", {
       y: 200,
@@ -33,25 +32,37 @@ export const HeroSection = () => {
     tl.to(overlay.current, {
       y: "-100%",
     });
-
   }, []);
 
   useEffect(() => {
-    if(!isOverlayCompleted) return;
+    if (!isOverlayCompleted) return;
 
     gsap.from(".brand-description", {
       y: 200,
-      duration: 0.3,
+      opacity: 0,
+      duration: 0.6,
       stagger: 0.1,
-    })
-  }, [isOverlayCompleted])
+    });
+  }, [isOverlayCompleted]);
 
   return (
     <div className="min-h-screen font-sans relative">
       {isOverlayCompleted ? (
-        <div className="flex  justify-center items-center h-screen text-5xl font-semibold">
-          <div className="overflow-y-hidden py-3">
-              {brandDescription.map((b, idx) =>  <span key={idx} className="inline-block brand-description lowercase mr-2">{b}</span>)}
+        <div className="flex flex-col  justify-center items-center h-screen  font-normal">
+          <div className="overflow-y-hidden py-3 text-5xl">
+            {brandDescription.map((b, idx) => (
+              <span
+                key={idx}
+                className="inline-block brand-description lowercase mr-2"
+              >
+                {b}
+              </span>
+            ))}
+          </div>
+
+          <div className="overflow-hidden py-3 text-5xl text-center mx-20 text-muted-foreground"> 
+            {subDescripton.map((sd, idx) => (<span key={idx}
+                className="inline-block brand-description lowercase mr-2">{sd}</span>))}
           </div>
         </div>
       ) : (
