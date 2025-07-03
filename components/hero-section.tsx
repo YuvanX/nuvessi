@@ -47,7 +47,7 @@ export const HeroSection = () => {
   }, [isOverlayCompleted]);
 
   return (
-    <div className="min-h-screen font-sans relative">
+    <div className="min-h-screen font-sans relative overflow-hidden">
       {isOverlayCompleted ? (
         <div className="flex flex-col items-center justify-center h-screen">
           <div className="lowercase text-5xl text-center tracking-tighter whitespace-nowrap font-thin">
