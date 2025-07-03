@@ -32,7 +32,7 @@ export const TopBar = () => {
   };
 
   return (
-    <div className="w-full flex justify-end gap-x-5  px-20 py-8 absolute text-muted-foreground items-center">
+    <div className="w-full flex justify-end gap-x-5  px-10 py-8 absolute text-muted-foreground items-center">
       <div className="section text-white bg-[#0D0D0D]  px-4 py-2 rounded-full border flex items-center gap-1 font-semibold">
         recent projects
         <ArrowUpRight size={21} />
