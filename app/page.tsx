@@ -5,7 +5,7 @@ import { TopBar } from "@/components/top-bar";
 
 export default function () {
   return (
-    <div>
+    <div className="bg-[#101010]">
       <Cursor />
       <TopBar />
       <HeroSection />

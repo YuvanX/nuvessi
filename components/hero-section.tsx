@@ -18,11 +18,7 @@ export const HeroSection = () => {
       duration: 0.6,
       stagger: 0.1,
       delay: 0.3,
-    }).from(".end", {
-      y: 200,
-      duration: 0.6,
-      stagger: -0.1,
-    });
+    })
 
     tl.from(overlay.current, {
       y: "100%",
@@ -66,24 +62,18 @@ export const HeroSection = () => {
           </div>
         </div>
       ) : (
-        <div className="text-9xl text-purple-500 overflow-hidden font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="text-9xl text-[#E5E5E3] overflow-hidden font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {brandName.map((char, idx) =>
-            idx < halfLength ? (
               <span key={idx} className="inline-block start">
                 {char}
               </span>
-            ) : (
-              <span className="inline-block end" key={idx}>
-                {char}
-              </span>
-            )
           )}
         </div>
       )}
 
       <div
         ref={overlay}
-        className="h-screen w-screen bg-purple-500 absolute top-0"
+        className="h-screen w-screen bg-[#0D0D0D] absolute top-0"
       ></div>
     </div>
   );
