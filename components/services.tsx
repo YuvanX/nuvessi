@@ -58,9 +58,9 @@ export const Services = () => {
 
   
   return (
-    <div className="flex flex-col items-start md:items-center min-h-screen mt-20 overscroll-none overflow-hidden font-sans mx-5">
+    <div className="flex flex-col items-start md:items-center min-h-screen overscroll-none overflow-hidden font-sans mx-5">
       <BackButton />
-      <div ref={titleRef} className="lowercase text-5xl font-bold">Services</div>
+      <div ref={titleRef} className="lowercase text-5xl font-bold mt-20 md:mt-10">Services</div>
       <div className="mt-10 md:mt-20 max-w-9xl">
         <div  className="space-y-5 md:space-y-10 flex flex-col">
           {SERVICES.map((s, idx) => (
