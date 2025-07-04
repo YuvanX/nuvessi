@@ -1,7 +1,8 @@
-'use client'
-import { redirect, useRouter } from "next/navigation";
+"use client";
+import { useRouter } from "next/navigation";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
+
 export const Footer = () => {
   const router = useRouter();
   return (
@@ -10,8 +11,11 @@ export const Footer = () => {
         slavan.
       </div>
       <div className="mb-2 md:mb-5 flex gap-8 md:gap-10 text-[#E5E5E3]">
-       <FaInstagram onClick={() => router.push("https://www.instagram.com/slavanhq/")}  className="text-xs md:text-xl"/>
-       <FaXTwitter className="text-xs md:text-xl" />
+        <FaInstagram
+          onClick={() => router.push("https://www.instagram.com/slavanhq/")}
+          className="text-xs md:text-xl"
+        />
+        <FaXTwitter className="text-xs md:text-xl" />
       </div>
     </div>
   );

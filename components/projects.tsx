@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { BackButton } from "./back-button";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Separator } from "./ui/separator";
 
@@ -82,9 +82,9 @@ export const Projects = () => {
       </div>
       <div className="my-20 flex flex-col items-center max-w-3xl gap-4 mx-auto w-full">
         {PROJECTS.map((p, idx) => (
-          <>
+          <React.Fragment key={idx}>
             <div
-              key={idx}
+              
               className="grid grid-cols-1 md:grid-cols-12 project-items md:mx-10"
             >
               <div className="md:col-span-2 px-2 py-2 font-medium">
@@ -107,7 +107,7 @@ export const Projects = () => {
               </div>
             </div>
             <Separator className="project-items"/>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

@@ -3,8 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 
-
-
 gsap.registerPlugin(useGSAP);
 
 export const Cursor = () => {

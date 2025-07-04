@@ -13,7 +13,6 @@ export const HeroSection = () => {
 
   const brandName = ["s", "l", "a", "v", "a", "n", "."];
 
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
@@ -36,19 +35,17 @@ export const HeroSection = () => {
     return () => ctx.revert();
   }, []);
 
-  
-
   return (
     <div className="min-h-screen font-sans relative overflow-hidden">
       {isOverlayCompleted ? (
         <div className="flex flex-col items-center justify-center h-screen mx-5">
           <div className="text-lg md:text-5xl text-center tracking-tighter whitespace-nowrap font-thin">
-            Making yours into ours - a brand built together.
+            Making yours into ours &#8211; a brand built together&#46;
           </div>
           <div className="w-full text-center mt-2 font-extralight text-xs md:text-xl md:max-w-2xl md:mt-4">
-            From concept to execution, we transform ideas into powerful digital
+            From concept to execution&#44; we transform ideas into powerful digital
             solutions that resonate with your audience and drive meaningful
-            results.
+            results&#46;
           </div>
           <div className="flex items-center gap-6 my-5 text-xs md:text-sm">
             <div
@@ -58,7 +55,15 @@ export const HeroSection = () => {
               checkout services
               <ArrowRight size={13} />
             </div>
-            <div onClick={() => router.push('https://cal.com/abhi-vignesh-k-j4ezz4/15min?user=abhi-vignesh-k-j4ezz4&overlayCalendar=true')}>Start your project</div>
+            <div
+              onClick={() =>
+                router.push(
+                  "https://cal.com/abhi-vignesh-k-j4ezz4/15min?user=abhi-vignesh-k-j4ezz4&overlayCalendar=true"
+                )
+              }
+            >
+              Start your project
+            </div>
           </div>
           <Footer />
         </div>
