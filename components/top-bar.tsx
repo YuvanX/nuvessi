@@ -21,7 +21,7 @@ export const TopBar = () => {
   });
 
   return (
-    <div className="w-full flex justify-end gap-x-5  px-10 py-8 absolute text-muted-foreground items-center">
+    <div className="w-full flex justify-center md:justify-end gap-x-5  px-10 py-8 absolute text-muted-foreground items-center">
       <button
         onClick={() => {
           router.push("/projects");
