@@ -13,12 +13,6 @@ export const HeroSection = () => {
 
   const brandName = ["s", "l", "a", "v", "a", "n", "."];
 
-  // const brandDescription =
-  //   "Making yours into ours - a brand built together.".split(" ");
-  // const subDescripton =
-  //   "We collaborate with founders and dreamers to shape brands that feel personal, intentional, and timeless. From story to style — we craft every detail with purpose.".split(
-  //     " "
-  //   );
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -42,16 +36,7 @@ export const HeroSection = () => {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
-    if (!isOverlayCompleted) return;
-
-    gsap.from(".brand-description", {
-      y: 200,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-    });
-  }, [isOverlayCompleted]);
+  
 
   return (
     <div className="min-h-screen font-sans relative overflow-hidden">
