@@ -27,10 +27,10 @@ export const TopBar = () => {
           router.push("/projects");
           console.log("clicked");
         }}
-        className="section text-white bg-[#0D0D0D]  px-4 py-2 rounded-full border flex items-center gap-1 font-semibold z-50"
+        className="text-xs md:text-sm  text-white bg-[#0D0D0D] px-4 py-2 rounded-full border flex items-center gap-1 font-semibold z-50 section whitespace-nowrap"
       >
         recent projects
-        <ArrowUpRight size={21} />
+        <ArrowUpRight size={21} className="md:text-xs" />
       </button>
       <div
         onClick={() =>
@@ -39,10 +39,10 @@ export const TopBar = () => {
           )
         }
         ref={scheduleButtonRef}
-        className="flex items-center gap-1 section bg-[#0D0D0D]  px-4 py-2 rounded-full text-white font-semibold border z-50"
+        className="flex items-center gap-1 section text-xs md:text-sm bg-[#0D0D0D]  px-4 py-2 rounded-full text-white font-semibold border z-50 whitespace-nowrap"
       >
         schedule meeting
-        <ArrowUpRight size={21} />
+        <ArrowUpRight size={21} className="md:text-xs"/>
       </div>
     </div>
   );
