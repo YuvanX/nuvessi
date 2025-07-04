@@ -2,12 +2,12 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
-import { CursorContext } from "@/context/CursorContext";
+
 
 
 gsap.registerPlugin(useGSAP);
 
-export const Cursor = ({ children }: { children?: React.ReactNode }) => {
+export const Cursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,12 +27,9 @@ export const Cursor = ({ children }: { children?: React.ReactNode }) => {
   }, []);
 
   return (
-    <CursorContext.Provider value={cursorRef}>
-      {children}
       <div
         ref={cursorRef}
         className="w-5 h-5 rounded-full bg-[#E5E5E3] fixed z-[100]"
       ></div>
-    </CursorContext.Provider>
   );
 };
