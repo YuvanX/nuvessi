@@ -58,18 +58,18 @@ export const Services = () => {
 
   
   return (
-    <div className="flex flex-col items-center min-h-screen mt-20 overscroll-none overflow-hidden font-sans">
+    <div className="flex flex-col items-start md:items-center min-h-screen mt-20 overscroll-none overflow-hidden font-sans mx-5">
       <BackButton />
       <div ref={titleRef} className="lowercase text-5xl font-bold">Services</div>
-      <div className="mt-20 max-w-9xl">
-        <div  className="space-y-10 flex flex-col">
+      <div className="mt-10 md:mt-20 max-w-9xl">
+        <div  className="space-y-5 md:space-y-10 flex flex-col">
           {SERVICES.map((s, idx) => (
             <div  key={idx} className="flex items-start gap-2 list-items">
               <Asterisk size={20} />
 
               <div className="flex flex-col items-start">
-                <div className="font-semibold text-2xl">{s.title}</div>
-                <div className="font-thin  text-neutral-300 text-lg">
+                <div className="font-semibold text-lg md:text-2xl">{s.title}</div>
+                <div className="font-thin  text-neutral-300 text-xs md:text-lg">
                   {s.description}
                 </div>
                 
