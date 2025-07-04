@@ -31,7 +31,7 @@ export const Cursor = ({ children }: { children?: React.ReactNode }) => {
       {children}
       <div
         ref={cursorRef}
-        className="w-5 h-5 rounded-full bg-[#E5E5E3] fixed z-50"
+        className="w-5 h-5 rounded-full bg-[#E5E5E3] fixed z-[100]"
       ></div>
     </CursorContext.Provider>
   );

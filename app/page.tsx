@@ -10,7 +10,6 @@ export default function () {
       <Cursor />
       <TopBar />
       <HeroSection />
-      <Footer />
     </div>
   );
 }
