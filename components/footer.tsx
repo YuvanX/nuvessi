@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export const Footer = () => {
   const router = useRouter();
   return (
-    <div className="absolute bottom-0 left-0 right-0 mx-10 flex justify-between items-end overflow-hidden">
+    <div className="fixed bottom-0 left-0 right-0 px-10 py-2 flex justify-between items-end overflow-hidden bg-background/30 border border-background/30 backdrop-blur-lg">
       <div className="text-5xl md:text-9xl text-[#E5E5E3] font-semibold tracking-tighter">
         slavan.
       </div>
