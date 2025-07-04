@@ -58,7 +58,7 @@ export const HeroSection = () => {
               checkout services
               <ArrowRight size={13} />
             </div>
-            <div>Start your project</div>
+            <div onClick={() => router.push('https://cal.com/abhi-vignesh-k-j4ezz4/15min?user=abhi-vignesh-k-j4ezz4&overlayCalendar=true')}>Start your project</div>
           </div>
           <Footer />
         </div>
