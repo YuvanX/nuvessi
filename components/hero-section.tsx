@@ -21,22 +21,25 @@ export const HeroSection = () => {
   //   );
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(".start", {
-      y: 200,
-      duration: 0.6,
-      stagger: 0.1,
-      delay: 0.3,
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.from(".start", {
+        y: 200,
+        duration: 0.6,
+        stagger: 0.1,
+        delay: 0.3,
+      });
 
-    tl.from(overlay.current, {
-      y: "100%",
-      onComplete: () => setIsOverlayCompleted(true),
-    });
+      tl.from(overlay.current, {
+        y: "100%",
+        onComplete: () => setIsOverlayCompleted(true),
+      });
 
-    tl.to(overlay.current, {
-      y: "-100%",
+      tl.to(overlay.current, {
+        y: "-100%",
+      });
     });
+    return () => ctx.revert();
   }, []);
 
   useEffect(() => {
