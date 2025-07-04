@@ -4,8 +4,11 @@ import Image from "next/image";
 import { BackButton } from "./back-button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Separator } from "./ui/separator";
 
 export const Projects = () => {
+  const titleRef = useRef(null);
+
   const PROJECTS = [
     {
       title: "unfold ui clone",
@@ -49,8 +52,6 @@ export const Projects = () => {
     },
   ];
 
-  const titleRef = useRef(null);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
@@ -71,37 +72,42 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-10">
       <BackButton />
       <div
         ref={titleRef}
-        className="text-white text-5xl font-semibold text-left md:text-center mx-5"
+        className="text-white text-5xl font-semibold text-left md:text-center mx-5 mt-10 md:mt-0"
       >
         projects
       </div>
       <div className="my-20 flex flex-col items-center max-w-3xl gap-4 mx-auto w-full">
         {PROJECTS.map((p, idx) => (
-          <div
-            key={idx}
-            className="grid grid-cols-1 md:grid-cols-12 project-items md:mx-10"
-          >
-            <div className="md:col-span-2 px-2 py-2 font-medium">{p.year}</div>
-            <div className="md:col-span-2 relative w-[100px] h-[100px] mx-2 md:order-last">
-              <Image
-                src={p.image}
-                alt={p.alt}
-                fill
-                className="rounded"
-                style={{ objectFit: "cover", objectPosition: "center" }}
-              />
-            </div>
-            <div className="md:col-span-8 flex flex-col px-2 py-2">
-              <div className="font-semibold text-xl lowercase">{p.title}</div>
-              <div className="text-muted-foreground lowercase">
-                {p.description}
+          <>
+            <div
+              key={idx}
+              className="grid grid-cols-1 md:grid-cols-12 project-items md:mx-10"
+            >
+              <div className="md:col-span-2 px-2 py-2 font-medium">
+                {p.year}
+              </div>
+              <div className="md:col-span-2 relative w-[100px] h-[100px] mx-2 md:order-last">
+                <Image
+                  src={p.image}
+                  alt={p.alt}
+                  fill
+                  className="rounded"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
+              <div className="md:col-span-8 flex flex-col px-2 py-2">
+                <div className="font-semibold text-xl lowercase">{p.title}</div>
+                <div className="text-muted-foreground lowercase">
+                  {p.description}
+                </div>
               </div>
             </div>
-          </div>
+            <Separator className="project-items"/>
+          </>
         ))}
       </div>
     </div>
