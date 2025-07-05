@@ -37,7 +37,7 @@ export const Projects = () => {
     {
       title: "cool youtube clone",
       description:
-        "This is an youtube clone remastering the design and in a minimal way. built using tailwindcss, motion, nextjs.",
+        "This is an youtube clone remastering the design and in a minimal way. built using tailwindcss, react.",
       year: "2024",
       image: "/images/youtube.png",
       alt: "youtube clone",
