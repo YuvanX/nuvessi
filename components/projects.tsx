@@ -21,7 +21,7 @@ export const Projects = () => {
     {
       title: "nexus",
       description:
-        "This is an full stack project, I have built it with miniaml design and its responsive. built using tailwindcss, motion, nextjs.",
+        "This is an full stack project, I have built it with miniaml design and its responsive. built using tailwindcss, motion, nextjs, neondb.",
       year: "2025",
       image: "/images/nexus.png",
       alt: "nexus",
@@ -29,7 +29,7 @@ export const Projects = () => {
     {
       title: "portfolio",
       description:
-        "This is an dukaan ui clone depicting the skills i have. built using tailwindcss, react.",
+        "This is my personal portfolio. built using tailwindcss, nextjs, shadcn.",
       year: "2025",
       image: "/images/portfolio.png",
       alt: "portfolio",
